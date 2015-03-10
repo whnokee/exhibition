@@ -38,7 +38,8 @@ token|String|是| | 秘钥
 name|String |是| | 活动名称
 category_id|Integer|是| |分类
 user_id|Integer|是||用户
-city|String|是||城市
+province|String|是||省
+city|String|是||市
 business_area|String|否|商圈
 state|Integer| 是| 0 |状态
 address|String|是| | 地址
@@ -46,7 +47,7 @@ lng|String | 否| | 经度
 lat|String | 否| | 纬度
 desc|String | 否| | 描述
 tel|String | 否||电话
-
+star|Integer|否||星级
 
 #展厅
 ##4： rooms
@@ -68,7 +69,7 @@ juyuan|String|是||剧院式
 yanhui|String|是||宴会式
 kezhuo|String|是||课桌式
 comment_count|Integer|是|0|评论数
- 
+
 #图片库
 ##5：assets
 名称|类型|是否必须|默认值|描述
@@ -80,8 +81,8 @@ desc|String|是||图片描述
 size|String|否||文件大小
 
 #分类
-## categories
+## 6： categories
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 name|String|是||名称
-target_type|String|是| | 类型
+state|Inteter|是|1|状态
