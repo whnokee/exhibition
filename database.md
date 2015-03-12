@@ -147,7 +147,7 @@ number|integer|是|| 版本号
 file|String| 是||文件
 desc|String|是||描述
 os_type|integer|是|0|操作系统
-state||integer|是|0|状态
+state|integer|是|0|状态
 
 #评论
 ##13：comments
