@@ -1,10 +1,9 @@
 ---
-会展通数据库文档 
+#会展通数据库文档 
 ---
 
 # 后台用户管理
 ## 1：admin_users
- 
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -13,9 +12,8 @@ password|String|是| |密码
 role|Integer| 是| 1 |角色 1：系统管理 2：编辑 3：运营
  
  
-# 用户管理
+# 用户表
 ## 2：users
- 
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -31,11 +29,10 @@ token|String|是| | 秘钥
 
 #活动会场
 ## 3：places
-
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
-name|String |是| | 活动名称
+name|String |是| | 会场名称
 category_id|Integer|是| |分类
 user_id|Integer|是||用户
 province|String|是||省
@@ -48,10 +45,11 @@ lat|String | 否| | 纬度
 desc|String | 否| | 描述
 tel|String | 否||电话
 star|Integer|否||星级
+sale_info|String| 否||促销信息
+price_area |String|是 || 价格范围
 
 #展厅
 ##4： rooms
-
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -70,8 +68,50 @@ yanhui|String|是||宴会式
 kezhuo|String|是||课桌式
 comment_count|Integer|是|0|评论数
 
+#活动
+## 5 events
+### 字段参数
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+place_id|Integer|是| |会场
+name|String |是| | 活动名称
+zan|Integer|是| 0 |赞
+
+
+#鲜花组合
+##5：group_flowers
+### 字段参数
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+name|String |是| | 名称
+desc|String |是| | 描述
+price|float|是 || 价格
+
+#鲜花
+##6：flowers
+### 字段参数
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+name|String |是| | 名称
+group_flower_id|Integer|是| |鲜花组合
+cnt|Integer|是 || 数量
+desc|String |是| | 描述
+
+#订单
+##5：orders
+### 字段参数
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+name|String |是| | 名称
+desc|String |是| | 描述
+target_type|String|是|| 订单类型 
+target_id |Integer|是|| 购买产品
+price |float|是 || 价格
+state|integer|是|0| 订单状态
+user_id|integer|是| |用户
+
 #图片库
-##5：assets
+##7：assets
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 target_id|Integer|是| | 附件
@@ -81,8 +121,9 @@ desc|String|是||图片描述
 size|String|否||文件大小
 
 #分类
-## 6： categories
+## 8： categories
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 name|String|是||名称
+type|Inteter|是|0|类型
 state|Inteter|是|1|状态
