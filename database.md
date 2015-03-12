@@ -1,19 +1,10 @@
 ---
 #会展通数据库文档 
 ---
-
-# 后台用户管理
-## 1：admin_users
-### 字段参数
-名称|类型|是否必须|默认值|描述
----|---|----|---|---
-account|String|是| |帐号
-password|String|是| |密码
-role|Integer| 是| 1 |角色 1：系统管理 2：编辑 3：运营
  
  
 # 用户表
-## 2：users
+## 1：users
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -22,10 +13,21 @@ password|String|是| |密码
 nickname|String|是| | 昵称
 job|String|否| | 职位
 state|Integer|是| 0 |状态
-role|Integer| 是| 0 |角色 0：普通用户 1：供应商
+role|Integer| 是| 0 |角色 0：普通用户 1：供应商 2：系统管理员
 os_type| String| 是| 0 |操作类型 0：安卓 1：ios
 head|String|是||头像
 token|String|是| | 秘钥 
+email|String|否| |邮箱
+
+#短信
+##2：sms
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+captcha|String|是| |激活码
+captchatime|Date|是| |截止时间
+mobile|Integer|是|| 手机
+state|Integer|是|0|是否激活
+
 
 #活动会场
 ## 3：places
@@ -110,6 +112,7 @@ target_id |Integer|是|| 购买产品
 price |float|是 || 价格
 state|integer|是|0| 订单状态
 user_id|integer|是| |用户
+cnt|Integer|是|0|数量
 
 #图片库
 ##9：assets
