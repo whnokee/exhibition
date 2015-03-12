@@ -76,19 +76,20 @@ comment_count|Integer|是|0|评论数
 place_id|Integer|是| |会场
 name|String |是| | 活动名称
 zan|Integer|是| 0 |赞
+desc|String|否| | 描述
 
 
 #鲜花组合
-##5：group_flowers
+##6：group_flowers
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 name|String |是| | 名称
 desc|String |是| | 描述
-price|float|是 || 价格
+price|float|是| | 价格
 
 #鲜花
-##6：flowers
+##7：flowers
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -98,7 +99,7 @@ cnt|Integer|是 || 数量
 desc|String |是| | 描述
 
 #订单
-##5：orders
+##8：orders
 ### 字段参数
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
@@ -111,7 +112,7 @@ state|integer|是|0| 订单状态
 user_id|integer|是| |用户
 
 #图片库
-##7：assets
+##9：assets
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 target_id|Integer|是| | 附件
@@ -121,9 +122,37 @@ desc|String|是||图片描述
 size|String|否||文件大小
 
 #分类
-## 8： categories
+## 10： categories
 名称|类型|是否必须|默认值|描述
 ---|---|----|---|---
 name|String|是||名称
 type|Inteter|是|0|类型
 state|Inteter|是|1|状态
+
+#反馈
+## 11： feedbacks
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+content|String|是||内容
+user_id|integer|是|| 用户
+
+#版本
+##12：versions
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+number|integer|是|| 版本号
+file|String| 是||文件
+desc|String|是||描述
+os_type|integer|是|0|操作系统
+state||integer|是|0|状态
+
+#评论
+##13：comments
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+content|String|是|| 内容
+user_id|Integer|是||用户
+target_id|Integer|是|| 会场
+target_type|String|是|| 类型
+state|Integer|是|0|状态
+
