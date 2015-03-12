@@ -156,3 +156,13 @@ target_id|Integer|是|| 会场
 target_type|String|是|| 类型
 state|Integer|是|0|状态
 
+#广告栏目
+##13：advertisements
+名称|类型|是否必须|默认值|描述
+---|---|----|---|---
+title|String|是|| 标题
+state|Integer|是|0|状态
+link_url|String|否||外链
+target_id|Integer|否|| 会场or鲜花
+target_type|String|否|| 会场or鲜花类型
+ 
